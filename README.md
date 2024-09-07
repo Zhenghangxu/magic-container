@@ -1,5 +1,6 @@
 This is a WIP project exploring the topic of end-to-end UI generation using the power of LLM
 
+![image](https://github.com/user-attachments/assets/94e168db-bffe-4b23-914f-26008b6c5686)
 
 ## Preliminary Research
 

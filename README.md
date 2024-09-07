@@ -15,6 +15,9 @@ Radix UI / Shadcn
 #### External Connectors 
 
 ### Pipeline (Work in Progress)
+
+```mermaid
+
 flowchart TD
     A[Prompt] --> B(extract data/style requirement from prompt)
     B --> C{Routing Agent}
@@ -24,6 +27,7 @@ flowchart TD
     G -->|no| I(new component)
     E -->|yes| J(Generate Base Design:Stable Diffusion)
     E -->|no| K(Generate CSS code)
+```
     
 ---
 

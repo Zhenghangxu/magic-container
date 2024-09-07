@@ -1,36 +1,63 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+This is a WIP project exploring the topic of end-to-end UI generation using the power of LLM
 
-## Getting Started
 
-First, run the development server:
+## Preliminary Research
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### Any existing solutions?
+- Vercel V0
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### TechStacks (Work in Progress)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+#### LLM
+#### UI Libraries
+Radix UI / Shadcn
+#### DB (for context and caching)
+#### External Connectors 
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Pipeline (Work in Progress)
+flowchart TD
+    A[Prompt] --> B(extract data/style requirement from prompt)
+    B --> C{Routing Agent}
+    C -->|Data:JSON schema| D[Similarity Search on existing Components schema] --> G{match?}
+    C --> P[Generate Layout] --Theme --> E{Is stylized?}
+    G -->|yes| H[rewrite schema]
+    G -->|no| I(new component)
+    E -->|yes| J(Generate Base Design:Stable Diffusion)
+    E -->|no| K(Generate CSS code)
+    
+---
 
-## Learn More
+### Agents
 
-To learn more about Next.js, take a look at the following resources:
+#### Data Converters
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+#### Layout Genenerator
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+#### Painter
 
-## Deploy on Vercel
+#### UI Code Generators
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+#### Testers
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+---
+
+### UI Generation
+
+#### Brand-agnotic
+
+#### How to handle highly-stylized elements?
+- animation
+- custom artwork
+- unconventional layout etc.
+
+#### Mantainability
+- Human readable source code
+
+#### UX/UI
+- Automated Accessibility
+- AI agent for usability testing?
+
+#### Updating UI with prompt?
+
+### Generate in client with Transformer.js?
